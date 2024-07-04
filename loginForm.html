@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style type="text/css">
+    body {
+      background: linear-gradient(to top, #aaaaaa, #ffffff, #aaaaaa), url('imgLogin.jpg');
+      background-blend-mode: multiply;
+      font-family: Arial, sans-serif;
+      background-repeat: no-repeat;
+      background-size: cover;
+      animation: slide-background 20s linear infinite;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    h1 {
+      text-transform: uppercase;
+      text-align: center;
+      color: black;
+      font-size: 30px;
+      margin-bottom: 20px;
+      animation: slide-up 1s ease-in;
+      font-weight: bold;
+    }
+    
+    h2 {
+      text-transform: uppercase;
+      text-align: center;
+      color: #131E3A;
+      font-size: 14px;
+      margin-bottom: 20px;
+      animation: slide-up 1s ease-in;
+      font-weight: bold;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    input[type="text"],
+    input[type="password"],
+    textarea {
+      padding: 10px;
+      border: none;
+      border-bottom: 2px solid #3498db;
+      box-sizing: border-box;
+      font-size: 14px;
+      animation: fade-in 1s ease-in;
+      background: transparent;
+      color: #333;
+      width: 100%;
+    }
+    
+    ::placeholder {
+      color: white; 
+    }
+
+    textarea {
+      height: 100px;
+      resize: none;
+    }
+    
+    .form-group label {
+      color: black;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    
+    .form-submit {
+      width: 100%;
+      padding: 12px 20px;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.1s ease;
+    }
+
+    .form-submit:hover,
+    .form-submit:focus {
+      background-color: skyblue;
+      outline: none;
+      border: 2px solid #fff;
+    }
+
+    .form-submit.refresh-button {
+      background-color: #e74c3c;
+    }
+
+     .form-submit.refresh-button:hover {
+      background-color: red;
+    }
+
+    .toggle-password {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+
+    @keyframes slide-background {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: 100% 100%;
+      }
+    }
+
+    .sign-up-button:hover {
+    background-color: skyblue;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="form-container">
+      <h1>Content Management System<i class="fas fa-cog"></i></h1>
+      <h2><i>Log in to start your session</i></h2>
+      <form method="post" action="http://localhost/ProjectCMS/Login.php">
+        <div class="form-group">
+          <label for="username"><b><i class="fas fa-user"></i> Username</b></label>
+          <input type="text" id="username" name="username" required class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="password"><b><i class="fas fa-lock"></i> Password</b></label>
+          <div style="display: flex;">
+            <input type="password" id="password" name="password" required class="form-control" style="flex: 1;">
+            <button type="button" id="showPassword" class="toggle-password" onclick="togglePasswordVisibility()">
+              <i class="fas fa-eye" id="passwordIcon"></i>
+            </button>
+          </div>
+        </div>
+        <div style="display: flex; justify-content: space-between;">
+          <button class="form-submit" type="submit" style="float: right; border: 1px solid white;">
+            <i class="fas fa-sign-in-alt"></i> SUBMIT
+          </button>
+          <button class="form-submit refresh-button" type="reset" style="float: right; border: 1px solid white;">
+            <i class="fas fa-sync-alt"></i> REFRESH
+          </button>
+        </div>
+      </form>
+      <div style="text-align: center; margin-top: 20px;">
+        <a href="http://localhost/ProjectCMS/SignIn.php" class="form-submit sign-up-button">
+          <i class="fas fa-user-plus"></i><b><i>SIGN UP</i></b>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function togglePasswordVisibility() {
+      var passwordInput = document.getElementById("password");
+      if (passwordInput.type == "password") {
+        passwordInput.type = "text";
+      } else {
+        passwordInput.type = "password";
+      }
+    }
+  </script>
+  </script>
+</body>
+</html>
