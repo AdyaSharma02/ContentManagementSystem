@@ -82,9 +82,7 @@ o	Import the cms.sql file into your MySQL database.
 o	Update the database connection details in config.php.
 5.	Run the Application:
 o	Open the project in a local server environment (e.g., XAMPP, WAMP).
-6.	Access the Application:
-o	Open a web browser and navigate to http://localhost/ContentManagementSystem.
-
+6.	Access the Application
 
 Usage
 1.	Login:
