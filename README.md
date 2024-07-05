@@ -97,13 +97,3 @@ o	Create new posts and update or delete existing ones.
 o	Add, edit, or delete user information.
 6.	View Account Details:
 o	View and update your account details.
-
-
-Contribution
-1.	Fork the Repository.
-2.	Create a New Branch:
-3.	Make Your Changes.
-4.	Commit Your Changes:
-5.	Push to the Branch:
-6.	Open a Pull Request.
-
