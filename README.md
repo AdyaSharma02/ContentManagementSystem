@@ -97,3 +97,7 @@ o	Create new posts and update or delete existing ones.
 o	Add, edit, or delete user information.
 6.	View Account Details:
 o	View and update your account details.
+
+
+Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
